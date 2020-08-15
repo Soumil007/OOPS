@@ -25,20 +25,18 @@ void insertion_sort(int *p,int n){
 	}
 }
 
-bool binary_search(int *p,int min,int max,int ele){
-	bool flag = false;
-	while(min<max){
+int binary_search(int *p,int min,int max,int ele){
+	while(min<=max){
 		int mid = (min+max)/2;
 		if(*(p+mid) == ele){
-			flag = true;
-			return flag;
+			return mid;
 		}else if(*(p+mid)<ele){
 			return binary_search(p,mid+1,max,ele);
 		}else{
 			return binary_search(p,min,mid-1,ele);
 		}
 	}
-	return flag;
+	return -1;
 }
 
 
@@ -65,9 +63,9 @@ int main(){
 	cout<<endl<<endl<<"Enter the element wish to search - ";
 	cin>>ele;
 	
-	bool flag = binary_search(arr,0,n-1,ele);
-	if(flag == true){
-		cout<<endl<<"Element found!!"<<endl;
+	int flag = binary_search(arr,0,n-1,ele);
+	if(flag>=0){
+		cout<<endl<<"Element found at position(zero indexed) - "<<flag<<endl;
 	}else{
 		cout<<endl<<"Element not found!!"<<endl;
 	}

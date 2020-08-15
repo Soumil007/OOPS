@@ -62,9 +62,15 @@ void eval(int n){
 }
 
 int main(){
-	int n;
-	cout<<"Enter a number to be evaluated -  ";
-	cin>>n;
-	eval(n);
+	int n,f=0;
+	do{
+		f=0;
+		cout<<"Enter a number to be evaluated -  ";
+		cin>>n;
+		eval(n);
+		cout<<endl<<"Do you wish to continue(non-zero number) - ";
+		cin>>f;
+	}while(f!=0);
+	
 	return 0;
 }

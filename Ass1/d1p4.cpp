@@ -12,27 +12,26 @@ struct complex{
 		cin>>a;
 		cin>>b;
 	}	
-	void display(){
-		cout<<"Inserted - ";
-		cout<<a<<" + ("<<b<<"i)";
+	void display(){	
+		cout<<endl<<a<<" + ("<<b<<"i)";
 	}
-	void add(complex c1,complex c2){
+	complex add(complex c2){
 		complex c3;
-		c3.a = c1.a + c2.a;
-		c3.b = c1.b + c2.b;
-		cout<<"Added - "<<c3.a<<" + (i "<<c3.b<<")";
+		c3.a = a + c2.a;
+		c3.b = b + c2.b;
+		return c3;
 	}
-	void substract(complex c1,complex c2){
+	complex substract(complex c2){
 		complex c3;
-		c3.a = c1.a - c2.a;
-		c3.b = c1.b - c2.b;
-		cout<<"Difference - "<<c3.a<<" + (i "<<c3.b<<")";
+		c3.a = a - c2.a;
+		c3.b = b - c2.b;
+		return c3;
 	}
-	void multiply(complex c1,complex c2){
+	complex multiply(complex c2){
 		complex c3;
-		c3.a = c1.a*c2.a - (c1.b*c2.b);
-		c3.b = c1.a*c2.b + c1.b*c2.a;
-		cout<<"Product - "<<c3.a<<" + (i "<<c3.b<<")";
+		c3.a = a*c2.a - (b*c2.b);
+		c3.b = a*c2.b + b*c2.a;
+		return c3;
 	}
 	
 };
@@ -43,19 +42,21 @@ int main(){
 	c1.display();
 	c2.init();
 	c2.display();
-	
+
 	int ch;
-	
 	
 	do{
 		cout<<endl<<"Chose An Option - "<<endl<<"1. Add"<<endl<<"2. Substract"<<endl<<"3. Multiply"<<endl<<"4. Exit"<<endl<<"Your Option -> ";
 		cin>>ch;
 		switch(ch){
-			case 1: c3.add(c1,c2);
+			case 1: c3 = c1.add(c2);
+				c3.display();
 				break;
-			case 2: c3.substract(c1,c2);
+			case 2: c3 = c1.substract(c2);
+				c3.display();
 				break;
-			case 3: c3.multiply(c1,c2);
+			case 3: c3 = c1.multiply(c2);
+				c3.display();
 				break;
 			case 4: exit(1);
 				break;
