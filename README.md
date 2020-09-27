@@ -24,3 +24,13 @@ OOPS:-
 				int sum += va_arg(var_Name,<type>varibles);
 
 			va_end(var_Name);
+
+>Static data members
+	*Note:
+		1.	C++ forbids in-class initialization of non-const static member function.
+		2. 	It can initialized outside the class using :: 
+
+>Constructor are of three types
+	1. Default Constructor
+	2. Parameteirzed Constructor
+	3. Copy Constructor
