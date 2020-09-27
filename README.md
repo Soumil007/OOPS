@@ -25,12 +25,12 @@ OOPS:-
 
 			va_end(var_Name);
 
->Static data members
-	*Note:
-		1.	C++ forbids in-class initialization of non-const static member function.
-		2. 	It can initialized outside the class using :: 
+>Static data members<br>
+	*Note:<br>
+		1.	C++ forbids in-class initialization of non-const static member function.<br>
+		2. 	It can initialized outside the class using :: <br> 
 
->Constructor are of three types
-	1. Default Constructor
-	2. Parameteirzed Constructor
-	3. Copy Constructor
+>Constructor are of three types <br>
+	1. Default Constructor <br>
+	2. Parameteirzed Constructor <br>
+	3. Copy Constructor <br>
