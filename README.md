@@ -34,3 +34,8 @@ OOPS:-
 	1. Default Constructor <br>
 	2. Parameteirzed Constructor <br>
 	3. Copy Constructor <br>
+>Constructor And Destructor<br>
+	1. An Objects scope is destructed as soon as ending braces are encountered<br>
+	2. Constrctors are called all at once in ascending order.
+	3 Similarily Destructor is called all at once in descending order.
+	
